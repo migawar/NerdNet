@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>iPhone 11 Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <main id="chat-container" class="chat-container">
+        <div id="chat-list" class="chat-list">
+            <!-- Hier verschijnen de chats -->
+        </div>
+        <button id="add-chat-btn" class="add-chat-btn">+</button>
+    </main>
 
+    <!-- Nieuw: Het actieve chatscherm -->
+    <div id="active-chat-screen" class="active-chat-screen" style="display: none;">
+        <div class="chat-header">
+            <button id="close-chat-btn"> terug</button>
+            <h2 id="active-chat-title">Chat</h2>
+        </div>
+        <div id="message-list" class="message-list"></div>
+        <div class="message-input-area">
+            <input type="text" id="message-input" placeholder="Typ een bericht...">
+            <button id="send-btn">Verstuur</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="#" class="chat-button" id="nav-chats">
+            <span class="chat-label">chats</span>
+            <svg class="glasses-icon" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="20" r="15" stroke="gold" stroke-width="3" fill="none" />
+                <circle cx="75" cy="20" r="15" stroke="gold" stroke-width="3" fill="none" />
+                <path d="M40 20 Q50 10 60 20" stroke="gold" stroke-width="3" fill="none" />
+            </svg>
+        </a>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
